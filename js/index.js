@@ -1,4 +1,4 @@
-window.onload=function(){
+window.onload=function() {
     consoleText();
 }
 function consoleText() {
@@ -51,8 +51,8 @@ function consoleText() {
                 text.value = "";
                 //添加内容和对应的样式
                 addEleStyle(newp.innerHTML,newp);
-                var a = reg(newp.innerHTML);
-                newp.innerHTML = a;
+                var content = reg(newp.innerHTML);
+                newp.innerHTML = content;
                 show.appendChild(newp);
             })
         })
