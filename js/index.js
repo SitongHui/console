@@ -9,7 +9,7 @@ function consoleText() {
     var showBox = document.querySelectorAll(".console > .console-show");
 
     //注册事件
-        //将事件添加进console框中
+        //添加事件，使输入到到输出台中
     btn1.forEach( (ele) => {
         ele.addEventListener("click",showfunc,false)
     });
@@ -41,12 +41,8 @@ function consoleText() {
             parentNode.classList.add("ordinary");
         }
     }
-        //不让其输出console.log/warn/error/info的正则表达式
-    function reg(str) {
-        var newstr = str.replace(/(console\.(log|warn|info|error)\(|\)|;)/g,"");
-        return newstr;
-    }
-       //循环元素
+
+       //让输入的内容显示在输出台
     function showfunc() {
         inputText.forEach( (text) => {
             showBox.forEach( (show) => {
@@ -61,11 +57,18 @@ function consoleText() {
             })
         })
     }
+
         //添加回车事件
     function enterAdd(e) {
         e = e || window.event;
         if(e.keyCode == 13){
             showfunc();
         }
+    }
+
+        //在输出中过滤掉console.log/warn/error/info的正则表达式
+    function reg(str) {
+        var newstr = str.replace(/(console\.(log|warn|info|error)\(|\)|;)/g,"");
+        return newstr;
     }
 }
