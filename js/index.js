@@ -29,13 +29,13 @@ function consoleText() {
     //工具函数
         //添加相应样式
     function addEleStyle(str,parentNode) {
-        if(str.indexOf("console.warn") !== -1) {
+        if(str.indexOf("console.warn") == 0) {
             parentNode.classList.add("warn");
-        }else if(str.indexOf("console.error") !== -1) {
+        }else if(str.indexOf("console.error") == 0) {
             parentNode.classList.add("error");
-        }else if(str.indexOf("console.log") !== -1) {
+        }else if(str.indexOf("console.log") == 0) {
             parentNode.classList.add("log");
-        }else if(str.indexOf("console.info") !== -1) {
+        }else if(str.indexOf("console.info") == 0) {
             parentNode.classList.add("info");
         }else{
             parentNode.classList.add("ordinary");
