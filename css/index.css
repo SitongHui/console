@@ -22,7 +22,7 @@
     height: 20px;
     outline: none;
 }
-.console > .btn {
+.console > .confirmbtn {
     padding: 2px 10px;
     margin: 30px 180px auto;
 }
@@ -54,7 +54,7 @@
 .console > .console-show > .ordinary{
     background: #eee;
 }
-.console > .showbtn {
+.console > .consolebtn {
     background: #1fb03d;
     color: #ffffff;
     font-size: 14px;
